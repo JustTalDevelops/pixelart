@@ -1,12 +1,12 @@
 package commands
 
 import (
-	"github.com/df-mc/dragonfly/server/session"
 	// These imports are to allow support for PNG, JPEG, and WEBP decoding.
 	_ "golang.org/x/image/webp"
 	_ "image/jpeg"
 	_ "image/png"
 
+	"github.com/df-mc/dragonfly/server/session"
 	"github.com/df-mc/dragonfly/server/block/cube"
 	"github.com/df-mc/dragonfly/server/cmd"
 	"github.com/df-mc/dragonfly/server/entity"
