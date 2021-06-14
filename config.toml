@@ -1,0 +1,17 @@
+
+[Network]
+  Address = ":19132"
+
+[Server]
+  AuthEnabled = true
+  JoinMessage = "%v has joined the game"
+  MaximumPlayers = 0
+  Name = "Dragonfly Server"
+  QuitMessage = "%v has left the game"
+  ShutdownMessage = "Server closed."
+
+[World]
+  Folder = "world"
+  MaximumChunkRadius = 32
+  Name = "World"
+  SimulationDistance = 8
