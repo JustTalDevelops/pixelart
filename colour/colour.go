@@ -35,8 +35,7 @@ func Defaults() (colours []Colour, err error) {
 }
 
 // Closest finds the closest colour out of a list of colours.
-func Closest(r, g, b uint32, colours []Colour) Colour {
-	var match Colour
+func Closest(r, g, b uint32, colours []Colour) (match Colour) {
 	minMSE := uint32(math.MaxUint32)
 
 	for _, c := range colours {
