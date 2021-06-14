@@ -1,10 +1,13 @@
 package colour
 
 import (
+	_ "embed"
 	"github.com/sandertv/gophertunnel/minecraft/nbt"
 	"math"
-	"os"
 )
+
+//go:embed mappings.nbt
+var mappingData []byte
 
 // Block contains a name and properties value which can be used to find a block.
 type Block struct {
@@ -24,11 +27,7 @@ type Colour struct {
 
 // Defaults ...
 func Defaults() (colours []Colour, err error) {
-	b, err := os.ReadFile("mappings.nbt")
-	if err != nil {
-		return nil, err
-	}
-	err = nbt.Unmarshal(b, &colours)
+	err = nbt.Unmarshal(mappingData, &colours)
 	if err != nil {
 		return nil, err
 	}
